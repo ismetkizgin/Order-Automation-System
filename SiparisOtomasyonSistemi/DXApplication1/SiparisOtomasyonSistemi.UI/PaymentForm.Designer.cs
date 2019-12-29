@@ -31,12 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PaymentForm));
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.btnOrderComplete = new DevExpress.XtraEditors.SimpleButton();
-            this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.txtKORemaining = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.btnCashPayment = new DevExpress.XtraEditors.SimpleButton();
-            this.txtCashAmount = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.txtKKRemaining = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
@@ -53,6 +47,12 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.txtKORemaining = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
+            this.btnCashPayment = new DevExpress.XtraEditors.SimpleButton();
+            this.txtCashAmount = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.txtCORemaining = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
@@ -63,7 +63,6 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtCheckNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
-            this.txtCheckDate = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtAccountNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -75,10 +74,9 @@
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtBranch = new DevExpress.XtraEditors.TextEdit();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.txtCheckDate = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
-            this.tabNavigationPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCashAmount.Properties)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCreditCartPayment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCartType.Properties)).BeginInit();
@@ -86,16 +84,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCartYear.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCartNo.Properties)).BeginInit();
+            this.tabNavigationPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCashAmount.Properties)).BeginInit();
             this.tabNavigationPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckPayment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckHolder.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckWhom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPane1
@@ -115,7 +116,7 @@
             this.tabPane1.RegularSize = new System.Drawing.Size(546, 572);
             this.tabPane1.SelectedPage = this.tabNavigationPage2;
             this.tabPane1.Size = new System.Drawing.Size(546, 572);
-            this.tabPane1.TabIndex = 1;
+            this.tabPane1.TabIndex = 0;
             this.tabPane1.Text = "Kapıda Ödeme";
             // 
             // btnOrderComplete
@@ -124,9 +125,181 @@
             this.btnOrderComplete.Location = new System.Drawing.Point(404, 3);
             this.btnOrderComplete.Name = "btnOrderComplete";
             this.btnOrderComplete.Size = new System.Drawing.Size(130, 29);
-            this.btnOrderComplete.TabIndex = 3;
+            this.btnOrderComplete.TabIndex = 0;
             this.btnOrderComplete.Text = "Siparişi Tamamla";
             this.btnOrderComplete.Click += new System.EventHandler(this.btnOrderComplete_Click);
+            // 
+            // tabNavigationPage2
+            // 
+            this.tabNavigationPage2.Caption = "Kredi Kartı";
+            this.tabNavigationPage2.Controls.Add(this.txtKKRemaining);
+            this.tabNavigationPage2.Controls.Add(this.labelControl21);
+            this.tabNavigationPage2.Controls.Add(this.txtCreditCartPayment);
+            this.tabNavigationPage2.Controls.Add(this.labelControl16);
+            this.tabNavigationPage2.Controls.Add(this.txtCartType);
+            this.tabNavigationPage2.Controls.Add(this.labelControl5);
+            this.tabNavigationPage2.Controls.Add(this.btnCreditCartPayment);
+            this.tabNavigationPage2.Controls.Add(this.txtCvv);
+            this.tabNavigationPage2.Controls.Add(this.txtCartYear);
+            this.tabNavigationPage2.Controls.Add(this.txtMonth);
+            this.tabNavigationPage2.Controls.Add(this.txtCartNo);
+            this.tabNavigationPage2.Controls.Add(this.labelControl4);
+            this.tabNavigationPage2.Controls.Add(this.labelControl3);
+            this.tabNavigationPage2.Controls.Add(this.labelControl2);
+            this.tabNavigationPage2.Controls.Add(this.labelControl1);
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            this.tabNavigationPage2.Size = new System.Drawing.Size(546, 539);
+            // 
+            // txtKKRemaining
+            // 
+            this.txtKKRemaining.Location = new System.Drawing.Point(166, 373);
+            this.txtKKRemaining.Name = "txtKKRemaining";
+            this.txtKKRemaining.Size = new System.Drawing.Size(21, 16);
+            this.txtKKRemaining.TabIndex = 23;
+            this.txtKKRemaining.Text = "000";
+            // 
+            // labelControl21
+            // 
+            this.labelControl21.Location = new System.Drawing.Point(78, 373);
+            this.labelControl21.Name = "labelControl21";
+            this.labelControl21.Size = new System.Drawing.Size(82, 16);
+            this.labelControl21.TabIndex = 22;
+            this.labelControl21.Text = "Sipariş Tutarı:";
+            // 
+            // txtCreditCartPayment
+            // 
+            this.txtCreditCartPayment.Location = new System.Drawing.Point(168, 288);
+            this.txtCreditCartPayment.Name = "txtCreditCartPayment";
+            this.txtCreditCartPayment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCreditCartPayment.Properties.Appearance.Options.UseFont = true;
+            this.txtCreditCartPayment.Properties.Mask.EditMask = "c2";
+            this.txtCreditCartPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCreditCartPayment.Size = new System.Drawing.Size(365, 28);
+            this.txtCreditCartPayment.TabIndex = 5;
+            // 
+            // labelControl16
+            // 
+            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl16.Appearance.Options.UseFont = true;
+            this.labelControl16.Location = new System.Drawing.Point(36, 291);
+            this.labelControl16.Name = "labelControl16";
+            this.labelControl16.Size = new System.Drawing.Size(124, 21);
+            this.labelControl16.TabIndex = 15;
+            this.labelControl16.Text = "Ödenecek Tutar:";
+            // 
+            // txtCartType
+            // 
+            this.txtCartType.Location = new System.Drawing.Point(168, 17);
+            this.txtCartType.Name = "txtCartType";
+            this.txtCartType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCartType.Properties.Appearance.Options.UseFont = true;
+            this.txtCartType.Size = new System.Drawing.Size(365, 28);
+            this.txtCartType.TabIndex = 0;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(91, 20);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(69, 21);
+            this.labelControl5.TabIndex = 13;
+            this.labelControl5.Text = "Kart Tipi:";
+            // 
+            // btnCreditCartPayment
+            // 
+            this.btnCreditCartPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.btnCreditCartPayment.Appearance.Options.UseFont = true;
+            this.btnCreditCartPayment.Location = new System.Drawing.Point(367, 348);
+            this.btnCreditCartPayment.Name = "btnCreditCartPayment";
+            this.btnCreditCartPayment.Size = new System.Drawing.Size(166, 62);
+            this.btnCreditCartPayment.TabIndex = 6;
+            this.btnCreditCartPayment.Text = "Ödeme Yap";
+            this.btnCreditCartPayment.Click += new System.EventHandler(this.btnCreditCartPayment_Click);
+            // 
+            // txtCvv
+            // 
+            this.txtCvv.Location = new System.Drawing.Point(168, 236);
+            this.txtCvv.Name = "txtCvv";
+            this.txtCvv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCvv.Properties.Appearance.Options.UseFont = true;
+            this.txtCvv.Properties.Mask.EditMask = "\\d{0,3}";
+            this.txtCvv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtCvv.Size = new System.Drawing.Size(365, 28);
+            this.txtCvv.TabIndex = 4;
+            // 
+            // txtCartYear
+            // 
+            this.txtCartYear.Location = new System.Drawing.Point(168, 181);
+            this.txtCartYear.Name = "txtCartYear";
+            this.txtCartYear.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCartYear.Properties.Appearance.Options.UseFont = true;
+            this.txtCartYear.Properties.Mask.EditMask = "\\d{0,4}";
+            this.txtCartYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtCartYear.Size = new System.Drawing.Size(365, 28);
+            this.txtCartYear.TabIndex = 3;
+            // 
+            // txtMonth
+            // 
+            this.txtMonth.Location = new System.Drawing.Point(168, 124);
+            this.txtMonth.Name = "txtMonth";
+            this.txtMonth.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtMonth.Properties.Appearance.Options.UseFont = true;
+            this.txtMonth.Properties.Mask.EditMask = "\\d{0,2}";
+            this.txtMonth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.txtMonth.Size = new System.Drawing.Size(365, 28);
+            this.txtMonth.TabIndex = 2;
+            // 
+            // txtCartNo
+            // 
+            this.txtCartNo.Location = new System.Drawing.Point(168, 69);
+            this.txtCartNo.Name = "txtCartNo";
+            this.txtCartNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCartNo.Properties.Appearance.Options.UseFont = true;
+            this.txtCartNo.Properties.Mask.EditMask = "n0";
+            this.txtCartNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtCartNo.Size = new System.Drawing.Size(365, 28);
+            this.txtCartNo.TabIndex = 1;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(124, 239);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(36, 21);
+            this.labelControl4.TabIndex = 7;
+            this.labelControl4.Text = "CVV:";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(7, 188);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(153, 21);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Son Kullanma Tarihi:";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(135, 127);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(25, 21);
+            this.labelControl2.TabIndex = 5;
+            this.labelControl2.Text = "Ay:";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(98, 72);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(62, 21);
+            this.labelControl1.TabIndex = 4;
+            this.labelControl1.Text = "Kart No:";
             // 
             // tabNavigationPage1
             // 
@@ -175,7 +348,7 @@
             this.txtCashAmount.Properties.Mask.EditMask = "c2";
             this.txtCashAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashAmount.Size = new System.Drawing.Size(365, 28);
-            this.txtCashAmount.TabIndex = 16;
+            this.txtCashAmount.TabIndex = 0;
             // 
             // labelControl7
             // 
@@ -186,178 +359,6 @@
             this.labelControl7.Size = new System.Drawing.Size(124, 21);
             this.labelControl7.TabIndex = 15;
             this.labelControl7.Text = "Ödenecek Tutar:";
-            // 
-            // tabNavigationPage2
-            // 
-            this.tabNavigationPage2.Caption = "Kredi Kartı";
-            this.tabNavigationPage2.Controls.Add(this.txtKKRemaining);
-            this.tabNavigationPage2.Controls.Add(this.labelControl21);
-            this.tabNavigationPage2.Controls.Add(this.txtCreditCartPayment);
-            this.tabNavigationPage2.Controls.Add(this.labelControl16);
-            this.tabNavigationPage2.Controls.Add(this.txtCartType);
-            this.tabNavigationPage2.Controls.Add(this.labelControl5);
-            this.tabNavigationPage2.Controls.Add(this.btnCreditCartPayment);
-            this.tabNavigationPage2.Controls.Add(this.txtCvv);
-            this.tabNavigationPage2.Controls.Add(this.txtCartYear);
-            this.tabNavigationPage2.Controls.Add(this.txtMonth);
-            this.tabNavigationPage2.Controls.Add(this.txtCartNo);
-            this.tabNavigationPage2.Controls.Add(this.labelControl4);
-            this.tabNavigationPage2.Controls.Add(this.labelControl3);
-            this.tabNavigationPage2.Controls.Add(this.labelControl2);
-            this.tabNavigationPage2.Controls.Add(this.labelControl1);
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(546, 539);
-            // 
-            // txtKKRemaining
-            // 
-            this.txtKKRemaining.Location = new System.Drawing.Point(166, 373);
-            this.txtKKRemaining.Name = "txtKKRemaining";
-            this.txtKKRemaining.Size = new System.Drawing.Size(21, 16);
-            this.txtKKRemaining.TabIndex = 23;
-            this.txtKKRemaining.Text = "000";
-            // 
-            // labelControl21
-            // 
-            this.labelControl21.Location = new System.Drawing.Point(78, 373);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(82, 16);
-            this.labelControl21.TabIndex = 22;
-            this.labelControl21.Text = "Sipariş Tutarı:";
-            // 
-            // txtCreditCartPayment
-            // 
-            this.txtCreditCartPayment.Location = new System.Drawing.Point(168, 288);
-            this.txtCreditCartPayment.Name = "txtCreditCartPayment";
-            this.txtCreditCartPayment.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCreditCartPayment.Properties.Appearance.Options.UseFont = true;
-            this.txtCreditCartPayment.Properties.Mask.EditMask = "c2";
-            this.txtCreditCartPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCreditCartPayment.Size = new System.Drawing.Size(365, 28);
-            this.txtCreditCartPayment.TabIndex = 16;
-            // 
-            // labelControl16
-            // 
-            this.labelControl16.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(36, 291);
-            this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(124, 21);
-            this.labelControl16.TabIndex = 15;
-            this.labelControl16.Text = "Ödenecek Tutar:";
-            // 
-            // txtCartType
-            // 
-            this.txtCartType.Location = new System.Drawing.Point(168, 17);
-            this.txtCartType.Name = "txtCartType";
-            this.txtCartType.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCartType.Properties.Appearance.Options.UseFont = true;
-            this.txtCartType.Size = new System.Drawing.Size(365, 28);
-            this.txtCartType.TabIndex = 14;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(91, 20);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(69, 21);
-            this.labelControl5.TabIndex = 13;
-            this.labelControl5.Text = "Kart Tipi:";
-            // 
-            // btnCreditCartPayment
-            // 
-            this.btnCreditCartPayment.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.btnCreditCartPayment.Appearance.Options.UseFont = true;
-            this.btnCreditCartPayment.Location = new System.Drawing.Point(367, 348);
-            this.btnCreditCartPayment.Name = "btnCreditCartPayment";
-            this.btnCreditCartPayment.Size = new System.Drawing.Size(166, 62);
-            this.btnCreditCartPayment.TabIndex = 12;
-            this.btnCreditCartPayment.Text = "Ödeme Yap";
-            this.btnCreditCartPayment.Click += new System.EventHandler(this.btnCreditCartPayment_Click);
-            // 
-            // txtCvv
-            // 
-            this.txtCvv.Location = new System.Drawing.Point(168, 236);
-            this.txtCvv.Name = "txtCvv";
-            this.txtCvv.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCvv.Properties.Appearance.Options.UseFont = true;
-            this.txtCvv.Properties.Mask.EditMask = "\\d{0,3}";
-            this.txtCvv.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtCvv.Size = new System.Drawing.Size(365, 28);
-            this.txtCvv.TabIndex = 11;
-            // 
-            // txtCartYear
-            // 
-            this.txtCartYear.Location = new System.Drawing.Point(168, 181);
-            this.txtCartYear.Name = "txtCartYear";
-            this.txtCartYear.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCartYear.Properties.Appearance.Options.UseFont = true;
-            this.txtCartYear.Properties.Mask.EditMask = "\\d{0,4}";
-            this.txtCartYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtCartYear.Size = new System.Drawing.Size(365, 28);
-            this.txtCartYear.TabIndex = 10;
-            // 
-            // txtMonth
-            // 
-            this.txtMonth.Location = new System.Drawing.Point(168, 124);
-            this.txtMonth.Name = "txtMonth";
-            this.txtMonth.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtMonth.Properties.Appearance.Options.UseFont = true;
-            this.txtMonth.Properties.Mask.EditMask = "\\d{0,2}";
-            this.txtMonth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.txtMonth.Size = new System.Drawing.Size(365, 28);
-            this.txtMonth.TabIndex = 9;
-            // 
-            // txtCartNo
-            // 
-            this.txtCartNo.Location = new System.Drawing.Point(168, 69);
-            this.txtCartNo.Name = "txtCartNo";
-            this.txtCartNo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCartNo.Properties.Appearance.Options.UseFont = true;
-            this.txtCartNo.Properties.Mask.EditMask = "n0";
-            this.txtCartNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtCartNo.Size = new System.Drawing.Size(365, 28);
-            this.txtCartNo.TabIndex = 8;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(124, 239);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(36, 21);
-            this.labelControl4.TabIndex = 7;
-            this.labelControl4.Text = "CVV:";
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(7, 188);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(153, 21);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Son Kullanma Tarihi:";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(135, 127);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(25, 21);
-            this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Ay:";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(98, 72);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(62, 21);
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Kart No:";
             // 
             // tabNavigationPage3
             // 
@@ -371,7 +372,6 @@
             this.tabNavigationPage3.Controls.Add(this.labelControl14);
             this.tabNavigationPage3.Controls.Add(this.txtCheckNo);
             this.tabNavigationPage3.Controls.Add(this.labelControl15);
-            this.tabNavigationPage3.Controls.Add(this.txtCheckDate);
             this.tabNavigationPage3.Controls.Add(this.labelControl12);
             this.tabNavigationPage3.Controls.Add(this.txtAccountNo);
             this.tabNavigationPage3.Controls.Add(this.labelControl13);
@@ -383,6 +383,7 @@
             this.tabNavigationPage3.Controls.Add(this.labelControl8);
             this.tabNavigationPage3.Controls.Add(this.txtBranch);
             this.tabNavigationPage3.Controls.Add(this.labelControl9);
+            this.tabNavigationPage3.Controls.Add(this.txtCheckDate);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
             this.tabNavigationPage3.Size = new System.Drawing.Size(546, 539);
             // 
@@ -409,7 +410,7 @@
             this.btnCheckPayment.Location = new System.Drawing.Point(342, 465);
             this.btnCheckPayment.Name = "btnCheckPayment";
             this.btnCheckPayment.Size = new System.Drawing.Size(166, 62);
-            this.btnCheckPayment.TabIndex = 33;
+            this.btnCheckPayment.TabIndex = 9;
             this.btnCheckPayment.Text = "Ödeme Yap";
             this.btnCheckPayment.Click += new System.EventHandler(this.btnCheckPayment_Click);
             // 
@@ -422,7 +423,7 @@
             this.txtCheckPayment.Properties.Mask.EditMask = "f2";
             this.txtCheckPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCheckPayment.Size = new System.Drawing.Size(365, 28);
-            this.txtCheckPayment.TabIndex = 32;
+            this.txtCheckPayment.TabIndex = 8;
             // 
             // labelControl17
             // 
@@ -443,7 +444,7 @@
             this.txtIban.Properties.Mask.EditMask = "f0";
             this.txtIban.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtIban.Size = new System.Drawing.Size(365, 28);
-            this.txtIban.TabIndex = 30;
+            this.txtIban.TabIndex = 6;
             // 
             // labelControl14
             // 
@@ -464,7 +465,7 @@
             this.txtCheckNo.Properties.Mask.EditMask = "f0";
             this.txtCheckNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCheckNo.Size = new System.Drawing.Size(365, 28);
-            this.txtCheckNo.TabIndex = 28;
+            this.txtCheckNo.TabIndex = 7;
             // 
             // labelControl15
             // 
@@ -475,17 +476,6 @@
             this.labelControl15.Size = new System.Drawing.Size(58, 21);
             this.labelControl15.TabIndex = 27;
             this.labelControl15.Text = "Çek No:";
-            // 
-            // txtCheckDate
-            // 
-            this.txtCheckDate.Location = new System.Drawing.Point(143, 216);
-            this.txtCheckDate.Name = "txtCheckDate";
-            this.txtCheckDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtCheckDate.Properties.Appearance.Options.UseFont = true;
-            this.txtCheckDate.Properties.Mask.EditMask = "99/99/00";
-            this.txtCheckDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
-            this.txtCheckDate.Size = new System.Drawing.Size(365, 28);
-            this.txtCheckDate.TabIndex = 26;
             // 
             // labelControl12
             // 
@@ -506,7 +496,7 @@
             this.txtAccountNo.Properties.Mask.EditMask = "f0";
             this.txtAccountNo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAccountNo.Size = new System.Drawing.Size(365, 28);
-            this.txtAccountNo.TabIndex = 24;
+            this.txtAccountNo.TabIndex = 5;
             // 
             // labelControl13
             // 
@@ -525,7 +515,7 @@
             this.txtCheckHolder.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtCheckHolder.Properties.Appearance.Options.UseFont = true;
             this.txtCheckHolder.Size = new System.Drawing.Size(365, 28);
-            this.txtCheckHolder.TabIndex = 22;
+            this.txtCheckHolder.TabIndex = 2;
             // 
             // labelControl10
             // 
@@ -544,7 +534,7 @@
             this.txtCheckWhom.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtCheckWhom.Properties.Appearance.Options.UseFont = true;
             this.txtCheckWhom.Size = new System.Drawing.Size(365, 28);
-            this.txtCheckWhom.TabIndex = 20;
+            this.txtCheckWhom.TabIndex = 3;
             // 
             // labelControl11
             // 
@@ -563,7 +553,7 @@
             this.txtBank.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtBank.Properties.Appearance.Options.UseFont = true;
             this.txtBank.Size = new System.Drawing.Size(365, 28);
-            this.txtBank.TabIndex = 18;
+            this.txtBank.TabIndex = 0;
             // 
             // labelControl8
             // 
@@ -582,7 +572,7 @@
             this.txtBranch.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtBranch.Properties.Appearance.Options.UseFont = true;
             this.txtBranch.Size = new System.Drawing.Size(365, 28);
-            this.txtBranch.TabIndex = 16;
+            this.txtBranch.TabIndex = 1;
             // 
             // labelControl9
             // 
@@ -593,6 +583,24 @@
             this.labelControl9.Size = new System.Drawing.Size(42, 21);
             this.labelControl9.TabIndex = 15;
             this.labelControl9.Text = "Şube:";
+            // 
+            // txtCheckDate
+            // 
+            this.txtCheckDate.EditValue = null;
+            this.txtCheckDate.Location = new System.Drawing.Point(143, 216);
+            this.txtCheckDate.Name = "txtCheckDate";
+            this.txtCheckDate.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.txtCheckDate.Properties.Appearance.Options.UseFont = true;
+            this.txtCheckDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtCheckDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtCheckDate.Properties.DisplayFormat.FormatString = "";
+            this.txtCheckDate.Properties.EditFormat.FormatString = "";
+            this.txtCheckDate.Properties.Mask.EditMask = "99/99/00";
+            this.txtCheckDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Simple;
+            this.txtCheckDate.Size = new System.Drawing.Size(365, 28);
+            this.txtCheckDate.TabIndex = 4;
             // 
             // PaymentForm
             // 
@@ -611,9 +619,6 @@
             this.Text = "Ödeme İşlemleri";
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
-            this.tabNavigationPage1.ResumeLayout(false);
-            this.tabNavigationPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCashAmount.Properties)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             this.tabNavigationPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCreditCartPayment.Properties)).EndInit();
@@ -622,17 +627,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCartYear.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMonth.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCartNo.Properties)).EndInit();
+            this.tabNavigationPage1.ResumeLayout(false);
+            this.tabNavigationPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCashAmount.Properties)).EndInit();
             this.tabNavigationPage3.ResumeLayout(false);
             this.tabNavigationPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckPayment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIban.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckHolder.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCheckWhom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranch.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCheckDate.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -666,7 +675,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.TextEdit txtCheckNo;
         private DevExpress.XtraEditors.LabelControl labelControl15;
-        private DevExpress.XtraEditors.TextEdit txtCheckDate;
         private DevExpress.XtraEditors.LabelControl labelControl12;
         private DevExpress.XtraEditors.TextEdit txtAccountNo;
         private DevExpress.XtraEditors.LabelControl labelControl13;
@@ -685,5 +693,6 @@
         private DevExpress.XtraEditors.LabelControl txtCORemaining;
         private DevExpress.XtraEditors.LabelControl labelControl23;
         private DevExpress.XtraEditors.SimpleButton btnOrderComplete;
+        private DevExpress.XtraEditors.DateEdit txtCheckDate;
     }
 }

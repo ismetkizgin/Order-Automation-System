@@ -187,7 +187,6 @@ C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\S
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\bin\Debug\ru\DevExpress.Office.v19.1.Core.resources.dll
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.csprojAssemblyReference.cache
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.AddressForm.resources
-C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.AdminForm.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.AdminListControl.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.CustomerListControl.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.MyOrderListControl.resources
@@ -206,3 +205,4 @@ C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\S
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.csproj.CopyComplete
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.exe
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.pdb
+C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.MainForm.resources

@@ -25,7 +25,7 @@ namespace SiparisOtomasyonSistemi.UI
         }
 
         public void AdminListLoad() =>
-            gcAdminList.DataSource = _adminManager.GetList().Where(x => x.AdminId != AdminForm.UserId);
+            gcAdminList.DataSource = _adminManager.GetList().Where(x => x.AdminId != MainForm.UserId);
 
         private void AdminListControl_Load(object sender, EventArgs e) => AdminListLoad();
 

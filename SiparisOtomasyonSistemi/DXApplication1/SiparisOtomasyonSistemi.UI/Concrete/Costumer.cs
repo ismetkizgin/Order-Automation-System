@@ -174,7 +174,7 @@ namespace SiparisOtomasyonSistemi.UI
         #region Order Operation 
         public void OrderAdd(Order order)
         {
-            order.CostumerId = AdminForm.UserId;
+            order.CostumerId = MainForm.UserId;
             
             SqlParameter[] orderParameters = new SqlParameter[]
             {

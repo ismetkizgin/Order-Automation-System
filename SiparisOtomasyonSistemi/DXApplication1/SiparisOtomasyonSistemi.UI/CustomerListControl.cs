@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using SiparisOtomasyonSistemi.UI.Concrete;
 using System;
 using System.Windows.Forms;
 

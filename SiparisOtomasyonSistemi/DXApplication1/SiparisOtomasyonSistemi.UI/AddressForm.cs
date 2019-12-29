@@ -12,7 +12,7 @@ namespace SiparisOtomasyonSistemi.UI
         {
             Costumer costumer = new Costumer();
             _orderManager = order;
-            costumer = costumer.CostumerGet(AdminForm.UserId);
+            costumer = costumer.CostumerGet(MainForm.UserId);
             _orderManager.OwnerName = string.Format("{0} {1}", costumer.FirstName, costumer.LastName);
             InitializeComponent();
             lblOrderDate.Text = DateTime.Now.Date.ToString("d");

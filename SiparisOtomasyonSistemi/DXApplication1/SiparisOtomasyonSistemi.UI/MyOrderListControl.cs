@@ -30,7 +30,7 @@ namespace SiparisOtomasyonSistemi.UI
             OrderListLoad();
         }
         private void OrderListLoad() =>
-            gcOrderList.DataSource = OrderData.Where(x => x.CostumerId == AdminForm.UserId);
+            gcOrderList.DataSource = OrderData.Where(x => x.CostumerId == MainForm.UserId);
         private void cbtnRefresh_Click(object sender, EventArgs e) => OrderListLoad();
 
         private void gvOrderList_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)

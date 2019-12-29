@@ -30,7 +30,7 @@ namespace SiparisOtomasyonSistemi.UI
             {
                 ProductId = _product != null ? _product.ProductId : 0,
                 ProductName = txtProductName.Text,
-                UnitPrice = Convert.ToDecimal(txtUnitPrice.Text)
+                UnitPrice = Convert.ToDecimal(txtUnitPrice.Text.Replace("₺",""))
             };
 
         }

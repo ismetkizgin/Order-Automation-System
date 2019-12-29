@@ -34,7 +34,7 @@ namespace SiparisOtomasyonSistemi.UI
 
             if (id != 0)
             {
-                AdminForm adminForm = new AdminForm(id, state);
+                MainForm adminForm = new MainForm(id, state);
                 adminForm.Show();
                 this.Hide();
             }

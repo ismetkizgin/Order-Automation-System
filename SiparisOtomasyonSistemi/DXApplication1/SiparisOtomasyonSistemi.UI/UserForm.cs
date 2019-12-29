@@ -152,7 +152,7 @@ namespace SiparisOtomasyonSistemi.UI
                     _admin.Delete(_userId);
                 else
                     _costumer.Delete(_userId);
-                if (_userId == AdminForm.UserId)
+                if (_userId == MainForm.UserId)
                     Application.Restart();
                 this.Close();
             }

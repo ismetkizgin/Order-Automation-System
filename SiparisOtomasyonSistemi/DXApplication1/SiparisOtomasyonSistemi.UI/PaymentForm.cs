@@ -30,7 +30,7 @@ namespace SiparisOtomasyonSistemi.UI
                                                                  txtCheckNo.Text != string.Empty &&
                                                                  txtCheckPayment.Text != string.Empty)
             {
-                decimal paid = Convert.ToDecimal(txtCheckPayment.Text);
+                decimal paid = Convert.ToDecimal(txtCheckPayment.Text.Replace("₺", ""));
                 if (_orderManager.TotalAmount == _totalpaid)
                 {
                     XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
@@ -53,7 +53,7 @@ namespace SiparisOtomasyonSistemi.UI
                     CheckWhom = txtCheckWhom.Text,
                     CheckDate = Convert.ToDateTime(txtCheckDate.Text),
                     CheckNo = txtCheckNo.Text,
-                    Amount = Convert.ToDecimal(txtCheckPayment.Text)
+                    Amount = Convert.ToDecimal(txtCheckPayment.Text.Replace("₺",""))
                 });
                 _totalpaid += paid;
                 PaidTotal();
@@ -120,7 +120,7 @@ namespace SiparisOtomasyonSistemi.UI
                     CartMonth = Convert.ToInt32(txtMonth.Text),
                     CartCvv = Convert.ToInt32(txtCvv.Text),
                     CartYear = Convert.ToInt32(txtCartYear.Text),
-                    Amount = Convert.ToDecimal(txtCreditCartPayment.Text)
+                    Amount = Convert.ToDecimal(txtCreditCartPayment.Text.Replace("₺", ""))
                 });
                 _totalpaid += paid;
                 PaidTotal();
