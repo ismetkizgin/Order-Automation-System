@@ -24,7 +24,7 @@ namespace SiparisOtomasyonSistemi.UI
         public decimal TotalAmount { get; set; }
         public int CostumerId { get; set; }
         public List<OrderDetail> OrderDetails { get; set; }
-        public List<Payment> PaymentList = new List<Payment>();
+        public List<Payment> PaymentList { get; set; }
 
         #endregion
 

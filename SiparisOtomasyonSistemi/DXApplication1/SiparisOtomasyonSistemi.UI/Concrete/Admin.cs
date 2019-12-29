@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 
-namespace SiparisOtomasyonSistemi.UI.Concrete
+namespace SiparisOtomasyonSistemi.UI
 {
     public class Admin
     {

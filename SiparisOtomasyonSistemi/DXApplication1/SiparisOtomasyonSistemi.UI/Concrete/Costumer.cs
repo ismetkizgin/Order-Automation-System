@@ -175,8 +175,7 @@ namespace SiparisOtomasyonSistemi.UI
         public void OrderAdd(Order order)
         {
             order.CostumerId = AdminForm.UserId;
-            Costumer itemCostumer = CostumerGet(order.CostumerId);
-            order.OwnerName = string.Format("{0} {1}", itemCostumer.FirstName, itemCostumer.LastName);
+            
             SqlParameter[] orderParameters = new SqlParameter[]
             {
                 new SqlParameter("@OrderDate",SqlDbType.Date),
@@ -388,6 +387,19 @@ namespace SiparisOtomasyonSistemi.UI
             };
             parameters[0].Value = orderId;
             int execute = ConnectionDal.ExecuteNonQuery("DeleteOrder", parameters, CommandType.StoredProcedure);
+            ExecuteState(execute);
+        }
+        public void OrderStateUpdate(int id, string state)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@OrderId",SqlDbType.Int),
+                new SqlParameter("@OrderState",SqlDbType.VarChar) 
+            };
+            parameters[0].Value = id;
+            parameters[1].Value = state;
+
+            int execute = ConnectionDal.ExecuteNonQuery("Update Orders Set OrderState=@OrderState where OrderId=@OrderId",parameters);
             ExecuteState(execute);
         }
         #endregion

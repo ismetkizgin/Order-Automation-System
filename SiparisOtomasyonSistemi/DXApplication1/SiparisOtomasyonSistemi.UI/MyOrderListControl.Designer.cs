@@ -166,7 +166,7 @@
             this.cbtnRefresh,
             this.cbtnPaidDetail});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(196, 56);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 84);
             // 
             // cbtnRefresh
             // 
@@ -178,6 +178,7 @@
             // 
             // cbtnPaidDetail
             // 
+            this.cbtnPaidDetail.Image = global::SiparisOtomasyonSistemi.UI.Properties.Resources.ödeme;
             this.cbtnPaidDetail.Name = "cbtnPaidDetail";
             this.cbtnPaidDetail.Size = new System.Drawing.Size(214, 26);
             this.cbtnPaidDetail.Text = "Ödeme İnceleme";

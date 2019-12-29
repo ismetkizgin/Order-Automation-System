@@ -203,6 +203,8 @@
             // 
             this.txtPhone.Location = new System.Drawing.Point(90, 113);
             this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Properties.Mask.EditMask = "\\d{0,11}";
+            this.txtPhone.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
             this.txtPhone.Size = new System.Drawing.Size(272, 22);
             this.txtPhone.TabIndex = 11;
             // 
@@ -236,6 +238,7 @@
             // 
             this.txtPassword.Location = new System.Drawing.Point(90, 56);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(272, 22);
             this.txtPassword.TabIndex = 16;
             // 

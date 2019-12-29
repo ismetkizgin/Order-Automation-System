@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Deployment.Application;
 using System.Linq;
 
 namespace SiparisOtomasyonSistemi.UI
@@ -21,7 +22,7 @@ namespace SiparisOtomasyonSistemi.UI
         {
             get
             {
-               return _costumerManager.OrderGetAllList();
+                return _costumerManager.OrderGetAllList();
             }
         }
 
@@ -30,7 +31,7 @@ namespace SiparisOtomasyonSistemi.UI
             InitializeComponent();
         }
 
-        private void OrderListLoad()=>
+        private void OrderListLoad() =>
             gcOrderList.DataSource = OrderData;
 
         private void OrderListControl_Load(object sender, EventArgs e) => OrderListLoad();
@@ -49,7 +50,23 @@ namespace SiparisOtomasyonSistemi.UI
             paidDetailForm.ShowDialog();
         }
 
-        private void cbtnDelete_Click(object sender, EventArgs e)=>
+        private void cbtnDelete_Click(object sender, EventArgs e) =>
             _costumerManager.OrderDelete(Convert.ToInt32(gvOrderList.GetRowCellValue(gvOrderList.FocusedRowHandle, "OrderId")));
+
+        private void OrderStateUpdate(string state)
+        {
+            _costumerManager.OrderStateUpdate(
+                Convert.ToInt32(gvOrderList.GetRowCellValue(gvOrderList.FocusedRowHandle, "OrderId")),
+                state);
+            OrderListLoad();
+        }
+
+        private void cST_Click(object sender, EventArgs e) => OrderStateUpdate("Sipariş Tamamlandı");
+
+        private void cK_Click(object sender, EventArgs e) => OrderStateUpdate("Kargo da");
+
+        private void cHA_Click(object sender, EventArgs e) => OrderStateUpdate("Hazırlık Aşamasında");
+
+        private void cOB_Click(object sender, EventArgs e) => OrderStateUpdate("Onay Bekliyor");
     }
 }

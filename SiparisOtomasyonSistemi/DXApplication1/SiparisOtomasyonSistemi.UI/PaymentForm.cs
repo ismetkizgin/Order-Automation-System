@@ -22,84 +22,113 @@ namespace SiparisOtomasyonSistemi.UI
 
         private void btnCheckPayment_Click(object sender, EventArgs e)
         {
-            decimal paid = Convert.ToDecimal(txtCheckPayment.Text);
-            if (_orderManager.TotalAmount == _totalpaid)
+            if (txtBank.Text != string.Empty && txtBranch.Text != string.Empty && txtCheckHolder.Text != string.Empty &&
+                                                                 txtCheckWhom.Text != string.Empty &&
+                                                                 txtCheckDate.Text != string.Empty &&
+                                                                 txtAccountNo.Text != string.Empty &&
+                                                                 txtIban.Text != string.Empty &&
+                                                                 txtCheckNo.Text != string.Empty &&
+                                                                 txtCheckPayment.Text != string.Empty)
             {
-                XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
-                return;
-            }
+                decimal paid = Convert.ToDecimal(txtCheckPayment.Text);
+                if (_orderManager.TotalAmount == _totalpaid)
+                {
+                    XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
+                    return;
+                }
 
-            if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
-            {
-                XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
-                paid = _orderManager.TotalAmount - _totalpaid;
+                if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
+                {
+                    XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
+                    paid = _orderManager.TotalAmount - _totalpaid;
+                }
+
+                _orderManager.PaymentList.Add(new Check()
+                {
+                    Bank = txtBank.Text,
+                    Branch = txtBranch.Text,
+                    CheckHolder = txtCheckHolder.Text,
+                    AccountNo = txtAccountNo.Text,
+                    Iban = txtIban.Text,
+                    CheckWhom = txtCheckWhom.Text,
+                    CheckDate = Convert.ToDateTime(txtCheckDate.Text),
+                    CheckNo = txtCheckNo.Text,
+                    Amount = Convert.ToDecimal(txtCheckPayment.Text)
+                });
+                _totalpaid += paid;
+                PaidTotal();
+                XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
             }
-            _orderManager.PaymentList.Add(new Check()
-            {
-                Bank = txtBank.Text,
-                Branch = txtBranch.Text,
-                CheckHolder = txtCheckHolder.Text,
-                AccountNo = txtAccountNo.Text,
-                Iban = txtIban.Text,
-                CheckWhom = txtCheckWhom.Text,
-                CheckDate = Convert.ToDateTime(txtCheckDate.Text),
-                CheckNo = txtCheckNo.Text,
-                Amount = Convert.ToDecimal(txtCheckPayment.Text)
-            });
-            _totalpaid += paid;
-            PaidTotal();
-            XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
+            else
+                XtraMessageBox.Show("Lütfen tüm alanları doğru doldurduğunuzdan emin olunuz.", "Hatalı Bilgi !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCashPayment_Click(object sender, EventArgs e)
         {
-            decimal paid = Convert.ToDecimal(txtCashAmount.Text);
-            if (_orderManager.TotalAmount == _totalpaid)
+            if (txtCashAmount.Text != string.Empty)
             {
-                XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
-                return;
+                decimal paid = Convert.ToDecimal(txtCashAmount.Text);
+                if (_orderManager.TotalAmount == _totalpaid)
+                {
+                    XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
+                    return;
+                }
+
+                if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
+                {
+                    XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
+                    paid = _orderManager.TotalAmount - _totalpaid;
+                }
+
+                _orderManager.PaymentList.Add(new Cash()
+                {
+                    Amount = paid,
+                });
+                _totalpaid += paid;
+                PaidTotal();
+                XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
             }
-            
-            if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
-            {
-                XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
-                paid = _orderManager.TotalAmount - _totalpaid;
-            }
-            _orderManager.PaymentList.Add(new Cash()
-            {
-                Amount = paid,
-            });
-            _totalpaid += paid;
-            PaidTotal();
-            XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
+            else
+                XtraMessageBox.Show("Lütfen tüm alanları doğru doldurduğunuzdan emin olunuz.", "Hatalı Bilgi !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCreditCartPayment_Click(object sender, EventArgs e)
         {
-            decimal paid = Convert.ToDecimal(txtCreditCartPayment.Text);
-            if (_orderManager.TotalAmount == _totalpaid)
+            if (txtCartType.Text != string.Empty && txtCartNo.Text != string.Empty &&
+                txtCartYear.Text != string.Empty && txtMonth.Text != string.Empty && txtCvv.Text != string.Empty &&
+                txtCreditCartPayment.Text != null)
             {
-                XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
-                return;
-            }
+                decimal paid = Convert.ToDecimal(txtCreditCartPayment.Text);
+                if (_orderManager.TotalAmount == _totalpaid)
+                {
+                    XtraMessageBox.Show("Ödene bilecek bir tutar bulunmamaktadır.");
+                    return;
+                }
 
-            if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
-            {
-                XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
-                paid = _orderManager.TotalAmount - _totalpaid;
+                if ((_orderManager.TotalAmount - _totalpaid) - paid < 0)
+                {
+                    XtraMessageBox.Show("Ödme işleminiz gerçekleşmiştir para üstü iade edildi");
+                    paid = _orderManager.TotalAmount - _totalpaid;
+                }
+
+                _orderManager.PaymentList.Add(new Credit()
+                {
+                    CartType = txtCartType.Text,
+                    CartNo = txtCartNo.Text,
+                    CartMonth = Convert.ToInt32(txtMonth.Text),
+                    CartCvv = Convert.ToInt32(txtCvv.Text),
+                    CartYear = Convert.ToInt32(txtCartYear.Text),
+                    Amount = Convert.ToDecimal(txtCreditCartPayment.Text)
+                });
+                _totalpaid += paid;
+                PaidTotal();
+                XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
             }
-            _orderManager.PaymentList.Add(new Credit()
-            {
-                CartType = txtCartType.Text,
-                CartNo = txtCartNo.Text,
-                CartMonth = Convert.ToInt32(txtMonth.Text),
-                CartCvv = Convert.ToInt32(txtCvv.Text),
-                CartYear = Convert.ToInt32(txtCartYear.Text),
-                Amount = Convert.ToDecimal(txtCreditCartPayment.Text)
-            });
-            _totalpaid += paid;
-            PaidTotal();
-            XtraMessageBox.Show("Ödeme işleminiz alınmıştır...", "Ödeme Tamamlandı", MessageBoxButtons.OK);
+            else
+                XtraMessageBox.Show("Lütfen tüm alanları doğru doldurduğunuzdan emin olunuz.", "Hatalı Bilgi !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnOrderComplete_Click(object sender, EventArgs e)

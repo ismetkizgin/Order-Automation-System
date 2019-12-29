@@ -49,6 +49,11 @@
             this.OrderState = new DevExpress.XtraGrid.Columns.GridColumn();
             this.OrderDate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.TotalAmount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.siparişDurumuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cST = new System.Windows.Forms.ToolStripMenuItem();
+            this.cK = new System.Windows.Forms.ToolStripMenuItem();
+            this.cHA = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOB = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tablePanel1)).BeginInit();
             this.tablePanel1.SuspendLayout();
@@ -64,9 +69,10 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cbtnRefresh,
             this.cbtnPaidDetail,
-            this.cbtnDelete});
+            this.cbtnDelete,
+            this.siparişDurumuToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 110);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(215, 136);
             // 
             // cbtnRefresh
             // 
@@ -78,6 +84,7 @@
             // 
             // cbtnPaidDetail
             // 
+            this.cbtnPaidDetail.Image = global::SiparisOtomasyonSistemi.UI.Properties.Resources.ödeme;
             this.cbtnPaidDetail.Name = "cbtnPaidDetail";
             this.cbtnPaidDetail.Size = new System.Drawing.Size(214, 26);
             this.cbtnPaidDetail.Text = "Ödeme İnceleme";
@@ -297,6 +304,45 @@
             this.TotalAmount.VisibleIndex = 5;
             this.TotalAmount.Width = 101;
             // 
+            // siparişDurumuToolStripMenuItem
+            // 
+            this.siparişDurumuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cST,
+            this.cK,
+            this.cHA,
+            this.cOB});
+            this.siparişDurumuToolStripMenuItem.Name = "siparişDurumuToolStripMenuItem";
+            this.siparişDurumuToolStripMenuItem.Size = new System.Drawing.Size(214, 26);
+            this.siparişDurumuToolStripMenuItem.Text = "Sipariş Durumu";
+            // 
+            // cST
+            // 
+            this.cST.Name = "cST";
+            this.cST.Size = new System.Drawing.Size(226, 26);
+            this.cST.Text = "Sipariş Tamamlandı";
+            this.cST.Click += new System.EventHandler(this.cST_Click);
+            // 
+            // cK
+            // 
+            this.cK.Name = "cK";
+            this.cK.Size = new System.Drawing.Size(226, 26);
+            this.cK.Text = "Kargo da";
+            this.cK.Click += new System.EventHandler(this.cK_Click);
+            // 
+            // cHA
+            // 
+            this.cHA.Name = "cHA";
+            this.cHA.Size = new System.Drawing.Size(226, 26);
+            this.cHA.Text = "Hazırlık Aşamasında";
+            this.cHA.Click += new System.EventHandler(this.cHA_Click);
+            // 
+            // cOB
+            // 
+            this.cOB.Name = "cOB";
+            this.cOB.Size = new System.Drawing.Size(226, 26);
+            this.cOB.Text = "Onay Bekliyor";
+            this.cOB.Click += new System.EventHandler(this.cOB_Click);
+            // 
             // OrderListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -337,5 +383,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn Quantity;
         private DevExpress.XtraGrid.Columns.GridColumn Total;
         private DevExpress.XtraGrid.Columns.GridColumn TotalAmount;
+        private System.Windows.Forms.ToolStripMenuItem siparişDurumuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cST;
+        private System.Windows.Forms.ToolStripMenuItem cK;
+        private System.Windows.Forms.ToolStripMenuItem cHA;
+        private System.Windows.Forms.ToolStripMenuItem cOB;
     }
 }

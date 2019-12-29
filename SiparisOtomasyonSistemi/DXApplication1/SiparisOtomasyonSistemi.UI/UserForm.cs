@@ -27,6 +27,15 @@ namespace SiparisOtomasyonSistemi.UI
             InitializeComponent();
         }
 
+        private bool StateText()
+        {
+            if (txtCity.Text == string.Empty && txtDistrict.Text != string.Empty && txtFirstName.Text != string.Empty &&
+                txtLastName.Text != string.Empty && txtMail.Text != string.Empty && txtPassword.Text != string.Empty &&
+                txtPhone.Text != string.Empty && txtTC.Text != string.Empty && txtUserName.Text != string.Empty)
+                return false;
+            return true;
+        }
+
         private Costumer CostumerTextGet()
         {
             return new Costumer()

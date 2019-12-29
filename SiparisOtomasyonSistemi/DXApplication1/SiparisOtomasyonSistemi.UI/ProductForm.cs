@@ -1,10 +1,12 @@
 ﻿using SiparisOtomasyonSistemi.UI.Concrete;
 using System;
 using System.Globalization;
+using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace SiparisOtomasyonSistemi.UI
 {
-    public partial class ProductForm : DevExpress.XtraEditors.XtraForm
+    public partial class ProductForm : XtraForm
     {
         Product _productManager = new Product();
         private readonly Product _product;
@@ -49,15 +51,21 @@ namespace SiparisOtomasyonSistemi.UI
 
         private void btnKaydet_Click(object sender, EventArgs e)
         {
-            _productManager = ItemGetData();
-            if (_statu)
+            if (txtProductName.Text != string.Empty && txtUnitPrice.Text != string.Empty)
             {
-                _productManager.Add();
-                this.Close();
-                
+                _productManager = ItemGetData();
+                if (_statu)
+                {
+                    _productManager.Add();
+                    this.Close();
+
+                }
+                else
+                    _productManager.Update();
             }
             else
-                _productManager.Update();
+                XtraMessageBox.Show("Lütfen tüm alanları doğru doldurduğunuzdan emin olunuz.", "Hatalı Bilgi !",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void btnCik_Click(object sender, EventArgs e) => this.Close();
