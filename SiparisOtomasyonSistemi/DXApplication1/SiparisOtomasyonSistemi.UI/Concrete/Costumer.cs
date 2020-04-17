@@ -341,39 +341,38 @@ namespace SiparisOtomasyonSistemi.UI
                     });
                 }
 
-                SqlParameter[] checkParameters = new SqlParameter[]
-                {
-                    new SqlParameter("@OrderId", SqlDbType.Int)
-                };
-                checkParameters[0].Value = item.OrderId;
-                DataTable checkTable = ConnectionDal.ExecuteDataTable(
-                    "Select * From Checks C where PaymentId=(select PaymentId from Payment where OrderId=@OrderId)",
-                    checkParameters);
-                for (int j = 0; j < checkTable.Rows.Count; j++)
-                {
-                    item.PaymentList.Add(new Check()
-                    {
-                        Bank = checkTable.Rows[i]["Bank"].ToString(),
-                        CheckWhom = checkTable.Rows[i]["CheckWhom"].ToString(),
-                        CheckHolder = checkTable.Rows[i]["CheckHolder"].ToString(),
-                        Amount = Convert.ToDecimal(checkTable.Rows[i]["Amount"])
-                    });
-                }
                 SqlParameter[] creditParameters = new SqlParameter[]
                 {
                     new SqlParameter("@OrderId", SqlDbType.Int)
                 };
                 creditParameters[0].Value = item.OrderId;
                 DataTable creditTable = ConnectionDal.ExecuteDataTable(
-                    "Select * From Credit C where PaymentId=(select PaymentId from Payment where OrderId=@OrderId)",
-                    creditParameters);
+                    "CreditList", creditParameters, CommandType.StoredProcedure);
                 for (int j = 0; j < creditTable.Rows.Count; j++)
                 {
                     item.PaymentList.Add(new Credit()
                     {
-                        Amount = Convert.ToDecimal(creditTable.Rows[i]["Amount"]),
-                        CartNo = creditTable.Rows[i]["CartNo"].ToString(),
-                        CartType = creditTable.Rows[i]["CartType"].ToString()
+                        Amount = Convert.ToDecimal(creditTable.Rows[j][0]),
+                        CartNo = creditTable.Rows[j][1].ToString(),
+                        CartType = creditTable.Rows[j][2].ToString()
+                    });
+                }
+
+                SqlParameter[] checkParameters = new SqlParameter[]
+                {
+                    new SqlParameter("@OrderId", SqlDbType.Int)
+                };
+                checkParameters[0].Value = item.OrderId;
+                DataTable checkTable = ConnectionDal.ExecuteDataTable(
+                    "Select * From Checks C where PaymentId=(select PaymentId from Payment where OrderId=@OrderId)", checkParameters);
+                for (int j = 0; j < checkTable.Rows.Count; j++)
+                {
+                    item.PaymentList.Add(new Check()
+                    {
+                        Bank = checkTable.Rows[j]["Bank"].ToString(),
+                        CheckWhom = checkTable.Rows[j]["CheckWhom"].ToString(),
+                        CheckHolder = checkTable.Rows[j]["CheckHolder"].ToString(),
+                        Amount = Convert.ToDecimal(checkTable.Rows[j]["Amount"])
                     });
                 }
             }

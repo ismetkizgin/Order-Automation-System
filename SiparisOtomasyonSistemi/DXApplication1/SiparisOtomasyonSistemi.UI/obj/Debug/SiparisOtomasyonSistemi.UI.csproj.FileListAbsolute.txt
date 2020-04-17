@@ -191,7 +191,6 @@ C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\S
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.CustomerListControl.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.MyOrderListControl.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.OrderAddControl.resources
-C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.OrderDetailForm.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.OrderListControl.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.PaidDetailForm.resources
 C:\Users\ismet\Desktop\Order-Automation\SiparisOtomasyonSistemi\DXApplication1\SiparisOtomasyonSistemi.UI\obj\Debug\SiparisOtomasyonSistemi.UI.PaymentForm.resources

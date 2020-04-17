@@ -95,12 +95,6 @@
     <Compile Include="OrderAddControl.Designer.cs">
       <DependentUpon>OrderAddControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetailForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderDetailForm.Designer.cs">
-      <DependentUpon>OrderDetailForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="OrderListControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderAddControl.resx">
       <DependentUpon>OrderAddControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderDetailForm.resx">
-      <DependentUpon>OrderDetailForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderListControl.resx">
       <DependentUpon>OrderListControl.cs</DependentUpon>

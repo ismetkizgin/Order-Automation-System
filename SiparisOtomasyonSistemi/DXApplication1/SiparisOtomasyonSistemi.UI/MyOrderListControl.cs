@@ -24,7 +24,7 @@ namespace SiparisOtomasyonSistemi.UI
                 return _costumerManager.OrderGetAllList();
             }
         }
-        public MyOrderListControl()
+        public MyOrderListControl() 
         {
             InitializeComponent();
             OrderListLoad();
